@@ -53,6 +53,12 @@ body {
     font-weight: 400;
 }
 
+.tag:hover {
+    color: #c5c5c5;
+    border-color: #c5c5c5;
+    cursor: pointer;
+}
+
 .portfolio-categories>.tag {
     margin-left: 10px;
 }
@@ -150,6 +156,11 @@ body {
 
 .personal-social-networks>div:first-child {
     margin-left: 1px;
+}
+
+.social-network>img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 .about-us-bottom-line {
