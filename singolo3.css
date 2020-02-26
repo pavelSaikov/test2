@@ -74,7 +74,8 @@ a {
 }
 
 .input-field,
-.textarea-field {
+.textarea-field,
+.submit-button {
     width: 604px;
     display: block;
     /* padding-top: 16px; */
@@ -113,6 +114,15 @@ a {
     resize: none;
     padding-top: 9px;
     padding-left: 13px;
+}
+
+.input-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    width: 100px;
 }
 
 .contact-information-container {
