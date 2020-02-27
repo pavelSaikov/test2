@@ -8,11 +8,8 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 95px;
-    background-color: #2d303a;
+    /* display: flex; */
+    /* align-items: center; */
 }
 
 .wrapper {
@@ -23,15 +20,18 @@ header {
 }
 
 .logo-and-menu-container {
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    height: 45px;
+    /* display: flex; */
+    /* align-items: flex-end; */
+    height: 89px;
     padding: 0 40px;
+    background-color: #2d303a;
 }
 
 .logo-container {
     display: flex;
+    padding-top: 29px;
+    /* padding-bottom: 2px; */
+    letter-spacing: -0.5px;
 }
 
 .menu-container {
@@ -47,6 +47,12 @@ nav.menu-container {
     display: flex;
     justify-content: space-between;
     width: 371px;
+    padding-top: 42px;
+}
+
+.menu-container-paragraph {
+    letter-spacing: -0.2px;
+    cursor: pointer;
 }
 
 .logo-container h1.star {
@@ -87,6 +93,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 69px;
+    color: #ca4549;
 }
 
 .right-btn {
@@ -96,19 +103,26 @@ main {
 .phones {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 882px;
-    padding: 0 50px;
-    padding-bottom: 5px;
+}
+
+.vertical-phone {
+    padding-left: 41px;
+    padding-bottom: 2px;
+}
+
+.horizontal-phone {
+    padding-left: 73px;
+    padding-bottom: 2px;
 }
 
 .left-btn img {
-    padding-left: 37px;
+    padding-left: 30px;
     padding-bottom: 5px;
 }
 
 .right-btn img {
-    padding-right: 36px;
+    padding-right: 30px;
     padding-bottom: 5px;
 }
 
@@ -141,8 +155,8 @@ footer {
 }
 
 .our-services {
-    margin-top: 61px;
-    letter-spacing: -1px;
+    margin-top: 59px;
+    letter-spacing: -0.2px;
     color: #666d89;
 }
 
@@ -154,9 +168,9 @@ footer {
 
 .description-container {
     height: 57px;
-    margin-top: 19px;
+    margin-top: 18px;
     line-height: 1.7;
-    color: #b8bccb;
+    color: #666d89;
     overflow: hidden;
     word-break: break-all
 }
@@ -166,7 +180,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     height: 250px;
-    margin-top: 48px;
+    margin-top: 49px;
 }
 
 .feature {
@@ -198,21 +212,23 @@ footer {
 }
 
 .text .header {
+    letter-spacing: -0.1px;
     color: #666d89;
 }
 
 .text .header.first-row {
-    margin-top: -2px;
+    margin-top: -3px;
 }
 
 .text .header.second-row {
-    margin-top: -4px;
+    margin-top: -5px;
 }
 
 .words p {
     height: 60px;
     margin-top: 8px;
-    line-height: 2;
+    padding-left: 1px;
+    line-height: 1.97;
     color: #666d89;
     overflow: hidden;
     word-break: break-all

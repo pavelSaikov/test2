@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
     font-family: 'LatoThin', sans-serif;
     src: url(assets/Lato-Thin.ttf);
     font-weight: 100;
@@ -42,12 +42,12 @@
 
 .logo-container h1,
 .menu-container {
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 500;
-    font-family: 'LatoSemibold', sans-serif;
+    font-family: 'Lato';
 }
 
-.logo-container h1  {
+.logo-container h1 {
     font-size: 25px;
 }
 
@@ -55,32 +55,35 @@
     font-size: 12px;
 }
 
+.dot {
+    font-weight: 100;
+    font-family: 'Lato';
+}
+
 .our-services {
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 700;
     font-size: 30px;
-    font-family: 'LatoBold', sans-serif;
+    font-family: 'Lato';
 }
 
 .description-container p {
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 300;
     font-size: 18px;
-    font-family: 'LatoLight', sans-serif;
+    font-family: 'Lato';
 }
 
 .text .header p {
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 700;
     font-size: 18px;
-    font-family: 'LatoBold', sans-serif;
+    font-family: 'Lato';
 }
 
 .text .words p {
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 400;
     font-size: 11px;
-    font-family: 'LatoRegular', sans-serif;
+    font-family: 'Lato';
 }
-
-
