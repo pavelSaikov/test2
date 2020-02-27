@@ -126,6 +126,7 @@ body {
     height: 22px;
     padding-top: 11px;
     font-size: 18px;
+    letter-spacing: -0.1px;
     color: #666d89;
     overflow: hidden;
 }
