@@ -7,11 +7,6 @@ body {
     min-width: 1020px;
 }
 
-header {
-    /* display: flex; */
-    /* align-items: center; */
-}
-
 .wrapper {
     display: flex;
     justify-content: space-between;
@@ -67,13 +62,9 @@ nav.menu-container {
     color: #494e62;
 }
 
-.header-strip {
+.logo-and-menu-strip {
     height: 6px;
     background-color: #323746;
-}
-
-main {
-    height: 600px;
 }
 
 .slider-area {
@@ -136,22 +127,21 @@ main {
     background-color: #323746;
 }
 
-.main-strip {
+.slider-area-strip {
     height: 6px;
     background-color: #ea676b;
 }
 
-footer {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    height: 500px;
-    background-color: #f2f2f2;
+.info-wrapper {
+    width: 940px;
+    height: 494px;
 }
 
 .info-container {
-    width: 940px;
-    height: 494px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: #f2f2f2;
 }
 
 .our-services {
@@ -160,7 +150,7 @@ footer {
     color: #666d89;
 }
 
-.footer-strip {
+.info-strip {
     width: 100%;
     height: 6px;
     background-color: #ffffff;
