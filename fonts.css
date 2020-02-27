@@ -42,7 +42,6 @@
 
 .logo-container h1,
 .menu-container {
-    /* font-style: normal; */
     font-weight: 500;
     font-family: 'Lato';
 }
@@ -61,28 +60,24 @@
 }
 
 .our-services {
-    /* font-style: normal; */
     font-weight: 700;
     font-size: 30px;
     font-family: 'Lato';
 }
 
 .description-container p {
-    /* font-style: normal; */
     font-weight: 300;
     font-size: 18px;
     font-family: 'Lato';
 }
 
 .text .header p {
-    /* font-style: normal; */
     font-weight: 700;
     font-size: 18px;
     font-family: 'Lato';
 }
 
 .text .words p {
-    /* font-style: normal; */
     font-weight: 400;
     font-size: 11px;
     font-family: 'Lato';

@@ -16,9 +16,7 @@ body {
 
 .portfolio-container {
     display: flex;
-    /* flex-flow: column; */
     justify-content: center;
-    /* align-items: center; */
     height: 864px;
     background-color: #2d303a;
 }
@@ -31,27 +29,22 @@ body {
 
 .portfolio-sentence {
     padding-top: 22px;
-    /* font-size: 18px;
-    color: #767e9e;
-    font-family: "Lato";
-    font-weight: 300; */
 }
 
 .portfolio-categories {
     display: flex;
     align-items: center;
     padding-top: 15px;
-    /* padding-bottom: 15px; */
 }
 
 .tag {
     padding: 3px 6px;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: "Lato";
+    color: #767e9e;
     border: 0.7px solid #767e9e;
     border-radius: 4px;
-    font-size: 12px;
-    color: #767e9e;
-    font-family: "Lato";
-    font-weight: 400;
 }
 
 .tag:hover {
@@ -70,7 +63,6 @@ body {
 }
 
 .portfolio-categories:first-child {
-    margin-left: 10px;
     margin-left: 0px;
 }
 
@@ -78,9 +70,9 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    overflow: hidden;
     height: 621px;
     padding-top: 19px;
+    overflow: hidden;
 }
 
 .portfolio-img {
@@ -97,10 +89,10 @@ body {
 }
 
 .explanatory-sentence {
-    font-size: 18px;
-    color: #767e9e;
-    font-family: "Lato";
     font-weight: 300;
+    font-size: 18px;
+    font-family: "Lato";
+    color: #767e9e;
 }
 
 .about-us-sentence {
@@ -138,11 +130,11 @@ body {
 
 .personal-biography {
     padding-top: 8px;
-    line-height: 21px;
-    font-size: 12px;
-    color: #767e9e;
-    font-family: "Lato";
     font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    font-family: "Lato";
+    color: #767e9e;
 }
 
 .personal-social-networks {
@@ -172,9 +164,9 @@ body {
 }
 
 h2 {
+    font-weight: 900;
     font-size: 30px;
     font-family: "Lato";
-    font-weight: 900;
 }
 
 h2.portfolio-header {

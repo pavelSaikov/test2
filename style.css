@@ -15,8 +15,6 @@ body {
 }
 
 .logo-and-menu-container {
-    /* display: flex; */
-    /* align-items: flex-end; */
     height: 89px;
     padding: 0 40px;
     background-color: #2d303a;
@@ -25,7 +23,6 @@ body {
 .logo-container {
     display: flex;
     padding-top: 29px;
-    /* padding-bottom: 2px; */
     letter-spacing: -0.5px;
 }
 
@@ -160,9 +157,8 @@ nav.menu-container {
     height: 57px;
     margin-top: 18px;
     line-height: 1.7;
-    color: #666d89;
     overflow: hidden;
-    word-break: break-all
+    color: #666d89;
 }
 
 .features-container {
@@ -219,14 +215,12 @@ nav.menu-container {
     margin-top: 8px;
     padding-left: 1px;
     line-height: 1.97;
-    color: #666d89;
     overflow: hidden;
-    word-break: break-all
+    color: #666d89;
 }
 
 .logo-container h1,
 .menu-container {
-    /* font-style: normal; */
     font-weight: 500;
     font-family: 'Lato';
 }
@@ -245,28 +239,24 @@ nav.menu-container {
 }
 
 .our-services {
-    /* font-style: normal; */
     font-weight: 700;
     font-size: 30px;
     font-family: 'Lato';
 }
 
 .description-container p {
-    /* font-style: normal; */
     font-weight: 300;
     font-size: 18px;
     font-family: 'Lato';
 }
 
 .text .header p {
-    /* font-style: normal; */
     font-weight: 700;
     font-size: 18px;
     font-family: 'Lato';
 }
 
 .text .words p {
-    /* font-style: normal; */
     font-weight: 400;
     font-size: 11px;
     font-family: 'Lato';
@@ -281,9 +271,7 @@ nav.menu-container {
 
 .portfolio-container {
     display: flex;
-    /* flex-flow: column; */
     justify-content: center;
-    /* align-items: center; */
     height: 864px;
     background-color: #2d303a;
 }
@@ -296,27 +284,22 @@ nav.menu-container {
 
 .portfolio-sentence {
     padding-top: 22px;
-    /* font-size: 18px;
-    color: #767e9e;
-    font-family: "Lato";
-    font-weight: 300; */
 }
 
 .portfolio-categories {
     display: flex;
     align-items: center;
     padding-top: 15px;
-    /* padding-bottom: 15px; */
 }
 
 .tag {
     padding: 3px 6px;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: "Lato";
+    color: #767e9e;
     border: 0.7px solid #767e9e;
     border-radius: 4px;
-    font-size: 12px;
-    color: #767e9e;
-    font-family: "Lato";
-    font-weight: 400;
 }
 
 .tag:hover {
@@ -335,7 +318,6 @@ nav.menu-container {
 }
 
 .portfolio-categories:first-child {
-    margin-left: 10px;
     margin-left: 0px;
 }
 
@@ -343,9 +325,9 @@ nav.menu-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    overflow: hidden;
     height: 621px;
     padding-top: 19px;
+    overflow: hidden;
 }
 
 .portfolio-img {
@@ -362,10 +344,10 @@ nav.menu-container {
 }
 
 .explanatory-sentence {
-    font-size: 18px;
-    color: #767e9e;
-    font-family: "Lato";
     font-weight: 300;
+    font-size: 18px;
+    font-family: "Lato";
+    color: #767e9e;
 }
 
 .about-us-sentence {
@@ -403,11 +385,11 @@ nav.menu-container {
 
 .personal-biography {
     padding-top: 8px;
-    line-height: 21px;
-    font-size: 12px;
-    color: #767e9e;
-    font-family: "Lato";
     font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    font-family: "Lato";
+    color: #767e9e;
 }
 
 .personal-social-networks {
@@ -437,9 +419,9 @@ nav.menu-container {
 }
 
 h2 {
+    font-weight: 900;
     font-size: 30px;
     font-family: "Lato";
-    font-weight: 900;
 }
 
 h2.portfolio-header {
@@ -452,12 +434,6 @@ h2.about-us-header {
     padding-top: 59px;
     letter-spacing: -0.2px;
     color: #666d89;
-}
-
-h2 {
-    font-size: 30px;
-    font-family: "Lato";
-    font-weight: 900;
 }
 
 a {
@@ -490,14 +466,14 @@ a {
 }
 
 .paragraph-font {
-    font-family: 'Lato';
     font-weight: 300;
+    font-family: 'Lato';
 }
 
 .quote-paragraph {
     padding-top: 18px;
-    line-height: 30px;
     font-size: 18px;
+    line-height: 30px;
     color: #f0d8d9;
 }
 
@@ -524,16 +500,15 @@ a {
 .input-field,
 .textarea-field,
 .submit-button {
-    width: 604px;
     display: block;
-    /* padding-top: 16px; */
+    width: 604px;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Lato';
     color: #f08586;
     background: #d6564f;
     border: 1px solid #d6564f;
     border-radius: 6px;
-    font-family: 'Lato';
-    font-weight: 400;
-    font-size: 12px;
 }
 
 ::-webkit-input-placeholder {
@@ -559,9 +534,9 @@ a {
 
 .textarea-field {
     height: 192px;
-    resize: none;
     padding-top: 9px;
     padding-left: 13px;
+    resize: none;
 }
 
 .input-button-container {
@@ -586,10 +561,9 @@ a {
 
 .contact-paragraph-font {
     padding-top: 8px;
-    font-size: 12px;
     font-weight: 400;
+    font-size: 12px;
     line-height: 22px;
-    /* letter-spacing: -0.2px; */
     color: #f0d8d9;
 }
 
@@ -653,12 +627,12 @@ a {
 }
 
 .copyright-logo {
-    padding-left: 1px;
     margin-top: -1px;
-    font-size: 12px;
+    padding-left: 1px;
     font-weight: 400;
-    color: #5b6179;
+    font-size: 12px;
     letter-spacing: -0.1px;
+    color: #5b6179;
 }
 
 .organization-social-networks-container>img {

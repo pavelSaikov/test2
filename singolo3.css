@@ -8,9 +8,9 @@ body {
 }
 
 h2 {
+    font-weight: 900;
     font-size: 30px;
     font-family: "Lato";
-    font-weight: 900;
 }
 
 a {
@@ -43,14 +43,14 @@ a {
 }
 
 .paragraph-font {
-    font-family: 'Lato';
     font-weight: 300;
+    font-family: 'Lato';
 }
 
 .quote-paragraph {
     padding-top: 18px;
-    line-height: 30px;
     font-size: 18px;
+    line-height: 30px;
     color: #f0d8d9;
 }
 
@@ -77,16 +77,15 @@ a {
 .input-field,
 .textarea-field,
 .submit-button {
-    width: 604px;
     display: block;
-    /* padding-top: 16px; */
+    width: 604px;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Lato';
     color: #f08586;
     background: #d6564f;
     border: 1px solid #d6564f;
     border-radius: 6px;
-    font-family: 'Lato';
-    font-weight: 400;
-    font-size: 12px;
 }
 
 ::-webkit-input-placeholder {
@@ -112,9 +111,9 @@ a {
 
 .textarea-field {
     height: 192px;
-    resize: none;
     padding-top: 9px;
     padding-left: 13px;
+    resize: none;
 }
 
 .input-button-container {
@@ -139,10 +138,9 @@ a {
 
 .contact-paragraph-font {
     padding-top: 8px;
-    font-size: 12px;
     font-weight: 400;
+    font-size: 12px;
     line-height: 22px;
-    /* letter-spacing: -0.2px; */
     color: #f0d8d9;
 }
 
@@ -206,12 +204,12 @@ a {
 }
 
 .copyright-logo {
-    padding-left: 1px;
     margin-top: -1px;
-    font-size: 12px;
+    padding-left: 1px;
     font-weight: 400;
-    color: #5b6179;
+    font-size: 12px;
     letter-spacing: -0.1px;
+    color: #5b6179;
 }
 
 .organization-social-networks-container>img {
