@@ -23,7 +23,8 @@ a {
     justify-content: center;
 }
 
-.wrapper {
+.wrapper-quote-section-container,
+.wrapper-footer-container {
     box-sizing: border-box;
     width: 1020px;
     padding: 0 40px;
