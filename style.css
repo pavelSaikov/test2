@@ -69,7 +69,7 @@ body {
 }
 
 .logo-container h1,
-.menu-container {
+.menu-container a {
     font-family: 'Lato';
     color: #ffffff;
 }
@@ -94,14 +94,18 @@ nav.menu-container {
 
 .menu-container-paragraph {
     letter-spacing: -0.2px;
-    cursor: pointer;
+    /* cursor: pointer; */
+}
+
+.menu-container-paragraph.selected {
+    color: #f06c64;
 }
 
 .logo-container h1.star {
     color: #f06c64;
 }
 
-.menu-container p:hover {
+.menu-container a:hover {
     color: #f06c64;
 }
 
@@ -134,26 +138,191 @@ nav.menu-container {
     align-items: center;
     width: 69px;
     color: #ca4549;
+    cursor: pointer;
 }
 
 .right-btn {
     width: 66px;
 }
 
-.phones {
-    display: flex;
-    align-items: center;
+.carousel {
+    height: 100%;
     width: 882px;
 }
 
+.slides-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    /* height:100%; */
+    position: relative;
+    animation: 0.5s ease-in-out;
+}
+
+.active,
+.next {
+    display: block;
+}
+
+.next {
+    position: absolute;
+    /* top: 0; */
+    width: 100%;
+}
+
+.to-left {
+    animation-name: left;
+}
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.slide-color-1 {
+    background: #f06c64;
+}
+.slide-color-2 {
+    background:#648BF0;
+}
+
+.phones {
+    display: relative;
+    /* align-items: center; */
+    width: 882px;
+}
+.phones > * {
+    position: absolute;
+}
+
+.vertical-phone-shadow {
+    margin-top: 53px;
+    margin-left: 42px;
+}
+
 .vertical-phone {
-    padding-left: 41px;
-    padding-bottom: 2px;
+    z-index: 2;
+    margin-top: 53px;
+    margin-left: 42px;
+}
+
+.vertical-black-display {
+    z-index: 3;
+    width: 188.9px;
+    height: 334.5px;
+    margin-top: 117px;
+    margin-left: 55.5px;
+    border-radius: 2px;
+    background-color: black;
+}
+.vertical-black-display.hide {
+    display: none;
+}
+
+.horizontal-phone-shadow {
+    margin-top: 174px;
+    margin-left: 355px;
 }
 
 .horizontal-phone {
-    padding-left: 73px;
-    padding-bottom: 2px;
+    z-index: 2;
+    margin-top: 174px;
+    margin-left: 355px;
+}
+
+.horizontal-black-display {
+    z-index: 3;
+    width: 333.7px;
+    height: 188.9px;
+    margin-top: 187.5px;
+    margin-left: 414.5px;
+    border-radius: 2px;
+    background-color: black;
+}
+
+.horizontal-black-display.hide {
+    display: none;
+}
+
+.left-phone {
+    margin-top: 152px;
+    margin-left: 175px;
+    z-index: 2;
+    opacity: 0.6;
+}
+.desktop-left-phone {
+    margin-top: 194px;
+    margin-left: 184px;
+    z-index: 2;
+    opacity: 0.6;
+}
+.shadow-left-phone {
+    margin-top: 152px;
+    margin-left: 175px;
+    opacity: 0.6;
+}
+
+.right-phone {
+    margin-top: 152px;
+    margin-left: 542px;
+    z-index: 2;
+    opacity: 0.6;
+}
+.desktop-right-phone {
+    margin-top: 194px;
+    margin-left: 551px;
+    z-index: 2;
+    opacity: 0.6;
+}
+.shadow-right-phone {
+    margin-top: 152px;
+    margin-left: 542px;
+    opacity: 0.6;
+}
+
+.central-phone {
+    margin-top: 43px;
+    margin-left: 314px;
+    z-index: 4;
+}
+.desktop-central-phone {
+    margin-top: 112px;
+    margin-left: 328px;
+    z-index: 5;
+}
+.shadow-central-phone {
+    margin-top: 43px;
+    margin-left: 314px;
+    z-index: 3;
 }
 
 .left-btn img {
@@ -166,15 +335,15 @@ nav.menu-container {
     padding-bottom: 5px;
 }
 
-.left-btn:hover,
+/* .left-btn:hover,
 .right-btn:hover {
     background-color: #ce5d56;
-}
+} */
 
-.left-btn:active,
+/* .left-btn:active,
 .right-btn:active {
     background-color: #323746;
-}
+} */
 
 .slider-area-strip {
     height: 6px;
@@ -326,7 +495,7 @@ nav.menu-container {
     padding: 3px 6px;
     font-weight: 400;
     font-size: 12px;
-    font-family: "Lato";
+    font-family: 'Lato';
     color: #767e9e;
     border: 0.7px solid #767e9e;
     border-radius: 4px;
@@ -338,11 +507,11 @@ nav.menu-container {
     cursor: pointer;
 }
 
-.portfolio-categories>.tag {
+.portfolio-categories > .tag {
     margin-left: 10px;
 }
 
-.portfolio-categories>.tag:first-child {
+.portfolio-categories > .tag:first-child {
     margin-left: 1px;
     padding: 3px 7px;
 }
@@ -376,7 +545,7 @@ nav.menu-container {
 .explanatory-sentence {
     font-weight: 300;
     font-size: 18px;
-    font-family: "Lato";
+    font-family: 'Lato';
     color: #767e9e;
 }
 
@@ -418,7 +587,7 @@ nav.menu-container {
     font-weight: 400;
     font-size: 12px;
     line-height: 21px;
-    font-family: "Lato";
+    font-family: 'Lato';
     color: #767e9e;
 }
 
@@ -431,15 +600,15 @@ nav.menu-container {
     margin-left: -1px;
 }
 
-.personal-social-networks>div {
+.personal-social-networks > div {
     margin-left: 8px;
 }
 
-.personal-social-networks>div:first-child {
+.personal-social-networks > div:first-child {
     margin-left: 1px;
 }
 
-.social-network>img:hover {
+.social-network > img:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
@@ -451,7 +620,7 @@ nav.menu-container {
 h2 {
     font-weight: 900;
     font-size: 30px;
-    font-family: "Lato";
+    font-family: 'Lato';
 }
 
 h2.portfolio-header {
@@ -519,11 +688,11 @@ a {
     padding-right: 21px;
 }
 
-.input-fields-container>div {
+.input-fields-container > div {
     padding-top: 16px;
 }
 
-.input-fields-container>div:first-child {
+.input-fields-container > div:first-child {
     padding-top: 0px;
 }
 
@@ -607,7 +776,7 @@ a {
     display: flex;
 }
 
-.contact-data>p {
+.contact-data > p {
     padding-top: 0px;
 }
 
@@ -665,16 +834,16 @@ a {
     color: #5b6179;
 }
 
-.organization-social-networks-container>img {
+.organization-social-networks-container > img {
     margin-top: 5px;
     margin-right: 4px;
 }
 
-.organization-social-networks-container>img:last-child {
+.organization-social-networks-container > img:last-child {
     margin-right: 0px;
 }
 
-.organization-social-networks-container>img:hover {
+.organization-social-networks-container > img:hover {
     cursor: pointer;
     transform: scale(1.2);
 }
