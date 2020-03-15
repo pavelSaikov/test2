@@ -103,3 +103,117 @@ document.querySelector('.right-btn').addEventListener('click', function() {
         }
     }
 });
+
+///////////////////////////////////////////////////
+function shuffle(arr) {
+    var j, temp;
+    for (var i = arr.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        temp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = temp;
+    }
+    return arr;
+}
+
+function portfolioCategoriesOnClick(event) {
+    if (event.target.tagName == 'P') {
+        const currentTarget = event.currentTarget;
+        const categories = currentTarget.getElementsByTagName('p');
+        for (let category of categories) {
+            if (category.classList.contains('active')) category.classList.remove('active');
+        }
+        const target = event.target;
+        target.classList.add('active');
+
+        const containerPhotoCollection = document.getElementsByClassName('portfolio-imgs')[0];
+        const photoCollection = containerPhotoCollection.children;
+
+        const arrImgs = [];
+        while (photoCollection.length != 0) {
+            let img = photoCollection[0];
+            containerPhotoCollection.removeChild(img);
+            arrImgs.push(img);
+        }
+
+        shuffle(arrImgs);
+
+        while (arrImgs.length != 0) {
+            containerPhotoCollection.append(arrImgs.pop());
+        }
+    }
+}
+
+document.getElementsByClassName('portfolio-categories')[0].addEventListener('click', portfolioCategoriesOnClick);
+
+/////////////////////////////////////////
+function portfolioImagesOnClick(event) {
+    console.log(event.target.tagName);
+    if (event.target.tagName == 'IMG') {
+        const divWithImgsCollection = document.getElementsByClassName('portfolio-imgs')[0].children;
+
+        for (let div of divWithImgsCollection) {
+            if (div.classList.contains('active')) {
+                div.classList.remove('active');
+            }
+        }
+
+        event.target.parentElement.classList.add('active');
+    }
+}
+
+document.getElementsByClassName('portfolio-imgs')[0].addEventListener('click', portfolioImagesOnClick);
+
+///////////////////////////////////////////
+
+document.getElementsByClassName('communication-form-container')[0].addEventListener('submit', function(event) {
+    event.preventDefault();
+    let inputs = document.querySelectorAll('input');
+
+    let email = inputs[1].value;
+    let subject = inputs[2].value;
+    let describe = document.querySelector('textarea').value;
+
+    let modalWindow = document.querySelector('.modal-window');
+
+    let messageContainer = modalWindow.firstElementChild;
+    while (messageContainer.firstElementChild) messageContainer.removeChild(messageContainer.firstElementChild);
+
+    let messageHasSendedDiv = document.createElement('div');
+    let paragraph = document.createElement('p');
+    paragraph.innerText = 'Письмо отправлено';
+    messageHasSendedDiv.append(paragraph);
+    messageContainer.append(messageHasSendedDiv);
+
+    let subjectDiv = document.createElement('div');
+    paragraph = document.createElement('p');
+    if (subject.length != 0) {
+        paragraph.innerText = 'Тема: ' + subject;
+    } else {
+        paragraph.innerText = 'Без темы';
+    }
+    subjectDiv.append(paragraph);
+    messageContainer.append(subjectDiv);
+
+    let describeDiv = document.createElement('div');
+    describeDiv.style.maxWidth = '100%';
+    paragraph = document.createElement('p');
+    if (describe.length != 0) {
+        paragraph.innerText = 'Описание: ' + describe;
+    } else {
+        paragraph.innerText = 'Без описания';
+    }
+    describeDiv.append(paragraph);
+    messageContainer.append(describeDiv);
+
+    let button = document.createElement('button');
+    button.innerText = 'Ok';
+    button.style.width = '5%';
+    button.style.maxWidth = '150px';
+    button.addEventListener('click', function(event) {
+        modalWindow.classList.remove('active');
+    });
+    messageContainer.append(button);
+
+    modalWindow.classList.add('active');
+});

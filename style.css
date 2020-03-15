@@ -212,7 +212,7 @@ nav.menu-container {
     background: #f06c64;
 }
 .slide-color-2 {
-    background:#648BF0;
+    background: #648bf0;
 }
 
 .phones {
@@ -520,6 +520,11 @@ nav.menu-container {
     margin-left: 0px;
 }
 
+.portfolio-categories > .tag.active {
+    color: #c5c5c5;
+    border-color: #c5c5c5;
+}
+
 .four-column-layout {
     display: flex;
     justify-content: space-between;
@@ -530,9 +535,15 @@ nav.menu-container {
 }
 
 .portfolio-img {
+    box-sizing: content-box;
     width: 23.4%;
     height: 187px;
     margin-bottom: 20px;
+}
+
+.portfolio-img.active {
+    box-sizing: border-box;
+    border: 5px solid #f06c64;
 }
 
 .about-us-container {
@@ -846,4 +857,28 @@ a {
 .organization-social-networks-container > img:hover {
     cursor: pointer;
     transform: scale(1.2);
+}
+
+.modal-window {
+    display: none;
+    position: fixed;
+    top: 30%;
+    height: 150px;
+    width: 100%;
+    z-index: 7;
+}
+
+.modal-window.active {
+    display: flex;
+    justify-content: center;
+}
+.message-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 20px 20px;
+    background: white;
+    border-radius: 5px;
 }
