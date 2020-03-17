@@ -9,10 +9,16 @@
     letter-spacing: -0.2px;
     @include font($font-weight: 700, $font-size: 30px);
     color: $medium-grey-color;
+    @media screen and (max-width:$media-tablet) {
+        margin-top: 39px;
+    }
+    @media screen and (max-width:$media-low-tablet) {
+        margin-top: 25px;
+    }
 }
 
 .description-container {
-    height: 57px;
+    // height: 57px;
     padding-top: 18px;
     line-height: 1.7;
     // overflow: hidden;
