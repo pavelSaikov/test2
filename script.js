@@ -217,3 +217,22 @@ document.getElementsByClassName('communication-form-container')[0].addEventListe
 
     modalWindow.classList.add('active');
 });
+
+//////////////////////////////////////////
+
+function openSideMenu() {
+    document.getElementsByClassName('side-menu')[0].classList.add('active');
+    document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+    document.getElementsByClassName('hamburger')[0].style.transform = 'rotate(-90deg)';
+}
+
+function closeSideMenu() {
+    document.getElementsByClassName('side-menu')[0].classList.remove('active');
+    document.body.style.backgroundColor = 'white';
+    document.getElementsByClassName('hamburger')[0].style.transform = 'rotate(0deg)';
+}
+
+document.getElementsByClassName('hamburger')[0].addEventListener('click', closeSideMenu);
+document.getElementsByClassName('hamburger')[1].addEventListener('click', openSideMenu);
+
+//////////////////////////////////////////
