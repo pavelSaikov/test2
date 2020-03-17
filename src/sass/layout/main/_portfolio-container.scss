@@ -1,13 +1,7 @@
 .portfolio-container {
     @include flex($justify-content: center);
-    height: 864px;
+    // height: 864px;
     background-color: $very-dark-grey;
-}
-
-.portfolio-bottom-line {
-    width: 100%;
-    height: 6px;
-    background-color: #323746;
 }
 
 .portfolio-sentence {
@@ -50,5 +44,14 @@
     &.active {
         color: $milk-with-strawberry-color;
         border-color: $milk-with-strawberry-color;
+    }
+}
+
+.portfolio-bottom-line {
+    width: 100%;
+    height: 6px;
+    background-color: #323746;
+    @media screen and (max-width: $media-screen450) {
+        display: none;
     }
 }

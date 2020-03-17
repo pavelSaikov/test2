@@ -1,18 +1,42 @@
 .four-column-layout {
     @include flex($justify-content: space-between, $flex-wrap: wrap);
-    height: 621px;
-    padding-top: 19px;
-    overflow: hidden;
+    // height: 621px;
+    padding-top: 18px;
+    padding-bottom: 68px;
+    // overflow: hidden;
+    @media screen and (max-width:$media-tablet) {
+        padding-top: 28px;
+        padding-bottom: 65.5px;
+    }
+    @media screen and(max-width: $media-screen450) {
+        padding-bottom: 42px;
+    }
 }
 
 .portfolio-img {
     box-sizing: content-box;
-    width: 23.4%;
+    width: 23.5%;
     height: 187px;
     margin-bottom: 20px;
 
     &.active {
         box-sizing: border-box;
         border: 5px solid $light-red-color;
+    }
+
+    @media screen and (max-width: $media-tablet) {
+        width: 31.5%;
+        height: 183px;
+    }
+
+    @media screen and (max-width: $media-low-tablet)
+    {
+        // width: 48%;
+        height: 150px;
+    }
+
+    @media screen and (max-width: $media-screen450) {
+        width: 48%;
+        height: 128px;
     }
 }

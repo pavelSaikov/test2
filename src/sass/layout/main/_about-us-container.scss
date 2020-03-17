@@ -1,26 +1,44 @@
 .about-us-container {
     @include flex($justify-content: center);
-    padding-bottom: 63px;
+    padding-bottom: 68px;
     background-color: $elephant-bound-color;
+    @media screen and (max-width: $media-tablet) {
+        padding-bottom: 75px;
+    }
+    @media screen and (max-width: $media-screen450) {
+        padding-bottom: 45px;
+    }
 }
 
 .about-us-sentence {
     padding-top: 18px;
+    padding-bottom: 46px;
     font-size: 18px;
     line-height: 1.65;
+    @media screen and (max-width: $media-screen600) {
+        padding-bottom: 0;
+    }
 }
 
 .three-column-layout {
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify-content: space-between, $flex-wrap: wrap);
+    @media screen and (max-width: $media-screen600) {
+        // justify-content: center;
+    }
 }
 
 .cutaway {
+    @include flex($flex-direction: column);
     width: 31.92%;
-    padding-top: 46px;
-
-    &-padding-right {
-        padding-right: 2px;
+    @media screen and (max-width: $media-screen600) {
+        width: 100%;
+        padding-top: 34px;
+    }
+}
+.human-photo {
+    & > img {
+        max-width: 330px;
+        max-height: 330px;
     }
 }
 
@@ -40,12 +58,17 @@
 .personal {
     &-biography {
         padding-top: 8px;
+        flex-grow: 1;
         @include font($font-weight: 400, $font-size: 12px);
         line-height: 21px;
         color: $grey-with-blue-color;
+        @media screen and (max-width: $media-screen600) {
+            padding-top: 4px;
+        }
     }
     &-social-networks {
         @include flex();
+
         padding-top: 24px;
         &-margin-left {
             margin-left: -1px;
@@ -58,6 +81,9 @@
         & > div:first-child {
             margin-left: 1px;
         }
+        @media screen and (max-width: $media-tablet) {
+            padding-top: 12px;
+        }
     }
 }
 
@@ -68,4 +94,7 @@
 
 .about-us-bottom-line {
     height: 6px;
+    @media screen and (max-width: $media-tablet) {
+        display: none;
+    }
 }
