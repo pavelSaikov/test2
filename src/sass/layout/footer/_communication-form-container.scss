@@ -1,0 +1,114 @@
+
+.communication-form-container {
+    @include flex($justify-content: space-between);
+}
+
+
+.input-fields-container {
+    @include flex($flex-direction: column);
+    padding-top: 44px;
+    padding-right: 21px;
+
+    & > div {
+        padding-top: 16px;
+    }
+
+    & > div:first-child {
+        padding-top: 0px;
+    }
+}
+
+%input-fields-template {
+    display: block;
+    width: 604px;
+    @include font($font-weight: 400, $font-size: 12px);
+    color: $input-color;
+    background: $input-background-color;
+    border: 1px solid $input-background-color;
+    border-radius: 6px;
+}
+
+::-webkit-input-placeholder {
+    color:$input-color;
+}
+
+::-moz-placeholder {
+    color: $input-color;
+}
+
+:-moz-placeholder {
+    color: $input-color;
+}
+
+:-ms-input-placeholder {
+    color: $input-color;
+}
+
+.input-field {
+    @extend %input-fields-template;
+    height: 36px;
+    padding-left: 13px;
+}
+
+.textarea-field {
+    @extend %input-fields-template;
+    height: 192px;
+    padding-top: 9px;
+    padding-left: 13px;
+    resize: none;
+}
+
+.submit-button {
+    @extend %input-fields-template;
+    width: 30%;
+}
+.input-button-container {
+    @include flex($justify-content: center);
+}
+
+.contact-information-container {
+    @include flex($flex-direction: column);
+}
+
+.contact-information-header {
+    padding-top: 42px;
+    font-size: 18px;
+    color: $light-peach-color;
+}
+
+.contact-paragraph-font {
+    padding-top: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: $light-peach-color;
+    &.second-paragraph {
+        margin-top: -1px;
+    }
+}
+
+.organization-contacts {
+    @include flex($flex-direction: column);
+    padding-top: 21px;
+}
+
+.contact-data {
+    @include flex();
+    & > p {
+        padding-top: 0px;
+    }
+    &-img-container {
+        width: 23px;
+        &.first-img {
+            padding-top: 5px;
+            padding-left: 3px;
+        }
+        &.second-img {
+            padding-top: 4px;
+            padding-left: 1px;
+        }
+        &.third-img {
+            padding-top: 2px;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+h1 {
+    @include font($font-weight: 500, $font-size: 25px);
+    &.logotype {
+        color: $white-color;
+
+        &.star {
+            color: $light-red-color;
+        }
+    }
+
+    &.logo-container__logotype {
+        color: $white-color;
+
+        &-star {
+            color: $light-red-color;
+        }
+    }
+
+}
+
+h2 {
+    @include font($font-weight: 900, $font-size: 30px);
+
+    &.portfolio-header {
+        padding-top: 60px;
+        letter-spacing: -0.2px;
+        color: $medium-grey-color;
+    }
+
+    &.about-us-header {
+        padding-top: 59px;
+        letter-spacing: -0.2px;
+        color: $medium-grey-color;
+    }
+}
+
+a {
+    text-decoration: none;
+}

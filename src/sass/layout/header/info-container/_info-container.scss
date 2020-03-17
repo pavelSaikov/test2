@@ -1,0 +1,30 @@
+.info-container {
+    @include flex($flex-direction: column, $align-items: center);
+    background-color: $elephant-bound-color;
+}
+
+.our-services {
+    margin-top: 59px;
+    letter-spacing: -0.2px;
+    @include font($font-weight: 700, $font-size: 30px);
+    color: $medium-grey-color;
+}
+
+.description-container {
+    height: 57px;
+    margin-top: 18px;
+    line-height: 1.7;
+    overflow: hidden;
+    color: $medium-grey-color;
+
+    p {
+        @include font($font-weight: 300, $font-size: 18px);
+    }
+}
+
+.info-strip {
+    width: 100%;
+    height: 6px;
+    background-color: $white-color;
+}
+

@@ -1,0 +1,18 @@
+.four-column-layout {
+    @include flex($justify-content: space-between, $flex-wrap: wrap);
+    height: 621px;
+    padding-top: 19px;
+    overflow: hidden;
+}
+
+.portfolio-img {
+    box-sizing: content-box;
+    width: 23.4%;
+    height: 187px;
+    margin-bottom: 20px;
+
+    &.active {
+        box-sizing: border-box;
+        border: 5px solid $light-red-color;
+    }
+}

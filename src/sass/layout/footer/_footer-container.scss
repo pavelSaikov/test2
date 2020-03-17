@@ -1,0 +1,34 @@
+.footer-container {
+    @include flex($justify-content: center);
+    height: 76px;
+    background-color: $background-logo-and-menu-container;
+}
+
+.footer-content {
+    @include flex($align-items: center, $justify-content: space-between);
+    height: 100%;
+}
+
+.copyright-logo {
+    margin-top: -1px;
+    padding-left: 1px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    color: $copyright-logo-color;
+}
+
+.organization-social-networks-container {
+    & > img {
+        margin-top: 5px;
+        margin-right: 4px;
+    }
+
+    & > img:last-child {
+        margin-right: 0px;
+    }
+    & > img:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}

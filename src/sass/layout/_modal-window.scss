@@ -1,0 +1,22 @@
+
+.modal-window {
+    display: none;
+    position: fixed;
+    top: 30%;
+    height: 150px;
+    width: 100%;
+    z-index: 7;
+}
+
+.modal-window.active {
+    @include flex($justify-content: center);
+}
+.message-container {
+    @include flex($flex-direction: column);
+    width: 70%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 20px 20px;
+    background: $white-color;
+    border-radius: 5px;
+}

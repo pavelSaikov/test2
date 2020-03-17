@@ -1,0 +1,24 @@
+%buttons-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 69px;
+    color: $common-red;
+    cursor: pointer;
+}
+
+.right-btn {
+    @extend %buttons-style;
+    img {
+        padding-right: 30px;
+        padding-bottom: 5px;
+    }
+}
+
+.left-btn {
+    @extend %buttons-style;
+    img {
+        padding-left: 30px;
+        padding-bottom: 5px;
+    }
+}

@@ -1,0 +1,25 @@
+.quote-section-container {
+    @include flex($justify-content: center);
+    height: 648px;
+    background-color: $light-red-color;
+}
+
+.quote-header {
+    padding-top: 60px;
+    font-size: 29px;
+    letter-spacing: 0.4px;
+    color: $light-peach-color;
+}
+
+.quote-paragraph {
+    padding-top: 18px;
+    @include font($font-size: 18px, $font-weight: 300);
+    font-size: 18px;
+    line-height: 30px;
+    color:$light-peach-color;
+}
+
+.quote-section-bottom-line {
+    height: 6px;
+    background-color: $slider-area-strip-color;
+}
