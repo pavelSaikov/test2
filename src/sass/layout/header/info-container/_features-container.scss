@@ -1,9 +1,13 @@
 .features-container {
     @include flex($justify-content: space-between, $flex-wrap: wrap);
     padding-top: 15px;
-    padding-bottom: 66px;
+    padding-bottom: 46px;
     @media screen and (max-width: $media-tablet) {
         padding-top: 0;
+        padding-bottom: 70px;
+    }
+    @media screen and (max-width: $media-screen450) {
+        padding-bottom: 25px;
     }
 }
 
@@ -12,11 +16,14 @@
     width: 31.7%;
     padding-top: 30px;
     @media screen and (max-width: $media-tablet) {
-        width: 43%;
+        width: 47%;
         padding-top: 39px;
     }
     @media screen and (max-width: $media-low-tablet){
         width: 100%;
+    }
+    @media screen and (max-width: $media-screen450) {
+        padding-top: 30px;
     }
 }
 
@@ -36,7 +43,7 @@
     & .words p {
         @include font($font-size: 11px, $font-weight: 400);
         margin-top: 8px;
-        line-height: 1.97;
+        line-height: 22px;
         color: $medium-grey-color;
     }
 }

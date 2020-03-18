@@ -14,7 +14,7 @@
     padding-top: 18px;
     padding-bottom: 46px;
     font-size: 18px;
-    line-height: 1.65;
+    line-height: 30px;
     @media screen and (max-width: $media-screen600) {
         padding-bottom: 0;
     }
@@ -23,7 +23,12 @@
 .three-column-layout {
     @include flex($justify-content: space-between, $flex-wrap: wrap);
     @media screen and (max-width: $media-screen600) {
-        // justify-content: center;
+        & > div.cutaway {
+            padding-top: 34px;
+        }
+        :first-child.cutaway {
+            padding-top: 28px;
+        }
     }
 }
 
@@ -32,7 +37,6 @@
     width: 31.92%;
     @media screen and (max-width: $media-screen600) {
         width: 100%;
-        padding-top: 34px;
     }
 }
 .human-photo {
@@ -60,7 +64,7 @@
         padding-top: 8px;
         flex-grow: 1;
         @include font($font-weight: 400, $font-size: 12px);
-        line-height: 21px;
+        line-height: 22px;
         color: $grey-with-blue-color;
         @media screen and (max-width: $media-screen600) {
             padding-top: 4px;

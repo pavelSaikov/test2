@@ -9,9 +9,8 @@
 .info-wrapper {
     max-width: 1020px;
     padding: 0px 40px;
-    @media screen and (max-width:$media-low-tablet) {
+    @media screen and (max-width: $media-low-tablet) {
         padding: 0px 32px;
-
     }
 }
 
@@ -22,9 +21,11 @@
     box-sizing: border-box;
     max-width: 1020px;
     padding: 0 40px;
-    @media screen and (max-width:$media-screen450) {
+    @media screen and (max-width: $media-screen450) {
         padding: 0 30px;
-
     }
+}
 
+.wrapper-footer-container {
+    width: 100%;
 }

@@ -1,20 +1,24 @@
 .quote-section-container {
     @include flex($justify-content: center);
-    height: 648px;
     background-color: $light-red-color;
 }
 
 .quote-header {
-    padding-top: 60px;
+    padding-top: 59px;
     font-size: 29px;
     letter-spacing: 0.4px;
     color: $light-peach-color;
+    @media screen and (max-width: $media-tablet) {
+        padding-top: 53px;
+    }
+    @media screen and (max-width: $media-screen450) {
+        padding-top: 44px;
+    }
 }
 
 .quote-paragraph {
     padding-top: 18px;
     @include font($font-size: 18px, $font-weight: 300);
-    font-size: 18px;
     line-height: 30px;
     color:$light-peach-color;
 }
@@ -22,4 +26,7 @@
 .quote-section-bottom-line {
     height: 6px;
     background-color: $slider-area-strip-color;
+    @media screen and (max-width: $media-screen550) {
+        display: none;
+    }
 }

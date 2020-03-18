@@ -1,26 +1,52 @@
-
 .communication-form-container {
     @include flex($justify-content: space-between);
+    padding-top: 44px;
+    padding-bottom: 58px;
+    @media screen and (max-width: $media-tablet) {
+        padding-top: 19px;
+        padding-bottom: 39px;
+    }
+    @media screen and (max-width: $media-screen550) {
+        flex-wrap: wrap;
+    }
+    @media screen and (max-width: $media-screen450) {
+        flex-wrap: wrap;
+        padding-bottom: 42px;
+    }
 }
 
+.quote-form {
+    width: 68%;
+    @media screen and (max-width: $media-screen550) {
+        width: 100%;
+    }
+}
 
 .input-fields-container {
     @include flex($flex-direction: column);
-    padding-top: 44px;
-    padding-right: 21px;
+
+    margin-right: 21px;
 
     & > div {
-        padding-top: 16px;
+        padding-top: 17px;
+        @media screen and (max-width: $media-tablet) {
+            padding-top: 13px;
+        }
     }
 
     & > div:first-child {
         padding-top: 0px;
     }
+
+    @media screen and (max-width: $media-screen550) {
+        margin-right: 0px;
+    }
 }
 
 %input-fields-template {
     display: block;
-    width: 604px;
+    box-sizing: border-box;
+    width: 100%;
     @include font($font-weight: 400, $font-size: 12px);
     color: $input-color;
     background: $input-background-color;
@@ -29,7 +55,7 @@
 }
 
 ::-webkit-input-placeholder {
-    color:$input-color;
+    color: $input-color;
 }
 
 ::-moz-placeholder {
@@ -46,13 +72,13 @@
 
 .input-field {
     @extend %input-fields-template;
-    height: 36px;
+    height: 37px;
     padding-left: 13px;
 }
 
 .textarea-field {
     @extend %input-fields-template;
-    height: 192px;
+    height: 201px;
     padding-top: 9px;
     padding-left: 13px;
     resize: none;
@@ -67,19 +93,23 @@
 }
 
 .contact-information-container {
+    width: 32%;
     @include flex($flex-direction: column);
+    @media screen and (max-width: $media-screen550) {
+        width: 100%;
+        padding-top: 32px;
+    }
 }
 
 .contact-information-header {
-    padding-top: 42px;
+    // padding-top: 42px;
     font-size: 18px;
     color: $light-peach-color;
 }
 
 .contact-paragraph-font {
     padding-top: 8px;
-    font-weight: 400;
-    font-size: 12px;
+    @include font($font-size: 12px, $font-weight: 400);
     line-height: 22px;
     color: $light-peach-color;
     &.second-paragraph {
@@ -90,6 +120,9 @@
 .organization-contacts {
     @include flex($flex-direction: column);
     padding-top: 21px;
+    @media screen and (max-width: $media-tablet) {
+        padding-top: 10px;
+    }
 }
 
 .contact-data {

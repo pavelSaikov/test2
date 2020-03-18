@@ -1,11 +1,13 @@
 .four-column-layout {
     @include flex($justify-content: space-between, $flex-wrap: wrap);
     // height: 621px;
-    padding-top: 18px;
+    // padding-top: 8px;
+    margin-top: -2px;
     padding-bottom: 68px;
     // overflow: hidden;
-    @media screen and (max-width:$media-tablet) {
-        padding-top: 28px;
+    @media screen and (max-width: $media-tablet) {
+        margin-top: 0;
+        padding-top: 8px;
         padding-bottom: 65.5px;
     }
     @media screen and(max-width: $media-screen450) {
@@ -17,7 +19,7 @@
     box-sizing: content-box;
     width: 23.5%;
     height: 187px;
-    margin-bottom: 20px;
+    padding-top: 20px;
 
     &.active {
         box-sizing: border-box;
@@ -29,9 +31,8 @@
         height: 183px;
     }
 
-    @media screen and (max-width: $media-low-tablet)
-    {
-        // width: 48%;
+    @media screen and (max-width: $media-low-tablet) {
+        padding-top: 14px;
         height: 150px;
     }
 

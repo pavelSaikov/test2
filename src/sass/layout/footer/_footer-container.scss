@@ -1,21 +1,28 @@
 .footer-container {
     @include flex($justify-content: center);
-    height: 76px;
+    padding: 17.5px 0px;
     background-color: $background-logo-and-menu-container;
 }
 
 .footer-content {
     @include flex($align-items: center, $justify-content: space-between);
     height: 100%;
+    @media screen and (max-width: $media-screen450) {
+        justify-content: center;
+    }
+    // width: 100%;
 }
 
 .copyright-logo {
+    flex-grow: 1;
     margin-top: -1px;
     padding-left: 1px;
-    font-weight: 400;
-    font-size: 12px;
+    @include font($font-weight: 400, $font-size: 12px);
     letter-spacing: -0.1px;
     color: $copyright-logo-color;
+    @media screen and (max-width: $media-screen450) {
+        display: none;
+    }
 }
 
 .organization-social-networks-container {
