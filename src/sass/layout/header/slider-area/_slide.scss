@@ -2,6 +2,7 @@
     display: none;
     position: relative;
     animation: 0.5s ease-in-out;
+    min-width: 100%;
 }
 .active,
 .next {
@@ -9,7 +10,7 @@
 }
 
 .next {
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 
@@ -49,7 +50,10 @@
 .phones {
     display: flex;
     /* height: 1200px; */
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 
     & > * {
         // width: 25%;
@@ -57,111 +61,159 @@
         //     width: 25%;
         //     height: auto;
         // }
+        position: relative;
+    }
+}
+
+.horizontal-phone-wrapper,
+.vertical-phone-wrapper {
+    position: relative;
+
+    .horizontal-phone,
+    .vertical-phone {
+        position: relative;
+        z-index: 1;
+    }
+
+    .horizontal-phone-shadow,
+    .vertical-phone-shadow {
         position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.right-phone-wrapper,
+.central-phone-wrapper,
+.left-phone-wrapper {
+    position: relative;
+
+    .shadow-right-phone,
+    .shadow-central-phone,
+    .shadow-left-phone {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .right-phone,
+    .central-phone,
+    .left-phone {
+        position: relative;
+        z-index: 1;
+    }
+
+    .desktop-right-phone,
+    .desktop-central-phone,
+    .desktop-left-phone {
+        position: absolute;
+        top: 14%;
+        left: 6%;
+        z-index: 2;
     }
 }
 
 .slide-1 {
-    .vertical-phone-shadow {
-        margin-top: 53px;
-        margin-left: 42px;
-    }
+    // .vertical-phone-shadow {
+    //     margin-top: 53px;
+    //     margin-left: 42px;
+    // }
 
-    .vertical-phone {
-        z-index: 2;
-        margin-top: 53px;
-        margin-left: 42px;
-    }
+    // .vertical-phone {
+    //     z-index: 2;
+    //     margin-top: 53px;
+    //     margin-left: 42px;
+    // }
 
-    .vertical-black-display {
-        z-index: 3;
-        width: 188.9px;
-        height: 334.5px;
-        margin-top: 117px;
-        margin-left: 55.5px;
-        border-radius: 2px;
-        background-color: black;
-    }
-    .vertical-black-display.hide {
-        display: none;
-    }
+    // .vertical-black-display {
+    //     z-index: 3;
+    //     width: 188.9px;
+    //     height: 334.5px;
+    //     margin-top: 117px;
+    //     margin-left: 55.5px;
+    //     border-radius: 2px;
+    //     background-color: black;
+    // }
+    // .vertical-black-display.hide {
+    //     display: none;
+    // }
 
-    .horizontal-phone-shadow {
-        margin-top: 174px;
-        margin-left: 355px;
-    }
+    // .horizontal-phone-shadow {
+    //     margin-top: 174px;
+    //     margin-left: 355px;
+    // }
 
-    .horizontal-phone {
-        z-index: 2;
-        margin-top: 174px;
-        margin-left: 355px;
-    }
+    // .horizontal-phone {
+    //     z-index: 2;
+    //     margin-top: 174px;
+    //     margin-left: 355px;
+    // }
 
-    .horizontal-black-display {
-        z-index: 3;
-        width: 333.7px;
-        height: 188.9px;
-        margin-top: 187.5px;
-        margin-left: 414.5px;
-        border-radius: 2px;
-        background-color: black;
-    }
+    // .horizontal-black-display {
+    //     z-index: 3;
+    //     width: 333.7px;
+    //     height: 188.9px;
+    //     margin-top: 187.5px;
+    //     margin-left: 414.5px;
+    //     border-radius: 2px;
+    //     background-color: black;
+    // }
 
-    .horizontal-black-display.hide {
-        display: none;
-    }
+    // .horizontal-black-display.hide {
+    //     display: none;
+    // }
 }
 
 .slide-2 {
-    .left-phone {
-        margin-top: 152px;
-        margin-left: 175px;
-        z-index: 2;
-        opacity: 0.6;
-    }
-    .desktop-left-phone {
-        margin-top: 194px;
-        margin-left: 184px;
-        z-index: 2;
-        opacity: 0.6;
-    }
-    .shadow-left-phone {
-        margin-top: 152px;
-        margin-left: 175px;
-        opacity: 0.6;
-    }
+    // .left-phone {
+    //     margin-top: 152px;
+    //     margin-left: 175px;
+    //     z-index: 2;
+    //     opacity: 0.6;
+    // }
+    // .desktop-left-phone {
+    //     margin-top: 194px;
+    //     margin-left: 184px;
+    //     z-index: 2;
+    //     opacity: 0.6;
+    // }
+    // .shadow-left-phone {
+    //     margin-top: 152px;
+    //     margin-left: 175px;
+    //     opacity: 0.6;
+    // }
 
-    .right-phone {
-        margin-top: 152px;
-        margin-left: 542px;
-        z-index: 2;
-        opacity: 0.6;
-    }
-    .desktop-right-phone {
-        margin-top: 194px;
-        margin-left: 551px;
-        z-index: 2;
-        opacity: 0.6;
-    }
-    .shadow-right-phone {
-        margin-top: 152px;
-        margin-left: 542px;
-        opacity: 0.6;
-    }
+    // .right-phone {
+    //     margin-top: 152px;
+    //     margin-left: 542px;
+    //     z-index: 2;
+    //     opacity: 0.6;
+    // }
+    // .desktop-right-phone {
+    //     margin-top: 194px;
+    //     margin-left: 551px;
+    //     z-index: 2;
+    //     opacity: 0.6;
+    // }
+    // .shadow-right-phone {
+    //     margin-top: 152px;
+    //     margin-left: 542px;
+    //     opacity: 0.6;
+    // }
 
-    .central-phone {
-        margin-top: 43px;
-        margin-left: 314px;
-        z-index: 4;
-    }
-    .desktop-central-phone {
-        margin-top: 112px;
-        margin-left: 328px;
-        z-index: 5;
-    }
-    .shadow-central-phone {
-        margin-top: 43px;
-        margin-left: 314px;
-        z-index: 3;
-    }
+    // .central-phone {
+    //     margin-top: 43px;
+    //     margin-left: 314px;
+    //     z-index: 4;
+    // }
+    // .desktop-central-phone {
+    //     margin-top: 112px;
+    //     margin-left: 328px;
+    //     z-index: 5;
+    // }
+    // .shadow-central-phone {
+    //     margin-top: 43px;
+    //     margin-left: 314px;
+    //     z-index: 3;
+    // }
 }

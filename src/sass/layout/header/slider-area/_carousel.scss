@@ -1,12 +1,14 @@
-.carousel {
-    height: 100%;
-    width: 87%;
-}
+// .carousel {
+//     height: 100%;
+//     width: 87%;
+// }
 
 .slides-container {
     display: flex;
+    flex-wrap: nowrap;
     position: relative;
-    width: 100%;
+    // width: 100%;
+    width: 87%;
     height: 100%;
     overflow: hidden;
 }
