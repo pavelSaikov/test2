@@ -77,14 +77,14 @@ function nextItem(n) {
 document.querySelector('.left-btn').addEventListener('click', function() {
     if (isEnabled) {
         previousItem(currentItem);
-        let sliderArea = document.getElementsByClassName('slider-area')[0];
+        let sliderContainer = document.getElementsByClassName('slider-container')[0];
 
         if (items[currentItem].classList.contains('slide-1')) {
-            sliderArea.classList.remove('slide-color-2');
-            sliderArea.classList.add('slide-color-1');
+            sliderContainer.classList.remove('slide-color-2');
+            sliderContainer.classList.add('slide-color-1');
         } else {
-            sliderArea.classList.remove('slide-color-1');
-            sliderArea.classList.add('slide-color-2');
+            sliderContainer.classList.remove('slide-color-1');
+            sliderContainer.classList.add('slide-color-2');
         }
     }
 });
@@ -92,14 +92,14 @@ document.querySelector('.left-btn').addEventListener('click', function() {
 document.querySelector('.right-btn').addEventListener('click', function() {
     if (isEnabled) {
         nextItem(currentItem);
-        let sliderArea = document.getElementsByClassName('slider-area')[0];
+        let sliderContainer = document.getElementsByClassName('slider-container')[0];
 
         if (items[currentItem].classList.contains('slide-1')) {
-            sliderArea.classList.remove('slide-color-2');
-            sliderArea.classList.add('slide-color-1');
+            sliderContainer.classList.remove('slide-color-2');
+            sliderContainer.classList.add('slide-color-1');
         } else {
-            sliderArea.classList.remove('slide-color-1');
-            sliderArea.classList.add('slide-color-2');
+            sliderContainer.classList.remove('slide-color-1');
+            sliderContainer.classList.add('slide-color-2');
         }
     }
 });

@@ -17,12 +17,18 @@
 .wrapper-quote-section-container,
 .wrapper-footer-container,
 .wrapper-portfolio-container,
-.wrapper-about-us-container {
+.wrapper-about-us-container,
+.slider-wrapper {
     box-sizing: border-box;
     max-width: 1020px;
     padding: 0 40px;
-    @media screen and (max-width: $media-screen450) {
+    @media screen and (max-width: $media-tablet) {
         padding: 0 30px;
+    }
+}
+.slider-wrapper {
+    @media screen and (max-width: $media-tablet) {
+        padding: 0 10px;
     }
 }
 

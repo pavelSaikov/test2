@@ -49,18 +49,13 @@
 
 .phones {
     display: flex;
-    /* height: 1200px; */
     flex-wrap: nowrap;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
 
+    align-items: center;
+    width: 100%;
+    padding-top: 6%;
+    padding-bottom: 6%;
     & > * {
-        // width: 25%;
-        // & > img {
-        //     width: 25%;
-        //     height: auto;
-        // }
         position: relative;
     }
 }
@@ -71,13 +66,13 @@
 
     .horizontal-phone,
     .vertical-phone {
-        position: relative;
+        position: absolute;
         z-index: 1;
     }
 
     .horizontal-phone-shadow,
     .vertical-phone-shadow {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
     }
@@ -91,15 +86,19 @@
     .shadow-right-phone,
     .shadow-central-phone,
     .shadow-left-phone {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
     }
 
     .right-phone,
-    .central-phone,
     .left-phone {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .central-phone {
+        position: absolute;
         z-index: 1;
     }
 
@@ -107,10 +106,36 @@
     .desktop-central-phone,
     .desktop-left-phone {
         position: absolute;
-        top: 14%;
-        left: 6%;
+        // top: 14%;
+        // left: 6%;
         z-index: 2;
     }
+}
+
+.vertical-phone-wrapper {
+    width: 27.5%;
+    margin-left: 5%;
+}
+.vertical-phone {
+    width: 89.5%;
+}
+
+.horizontal-phone-wrapper {
+    width: 55%;
+    margin-left: 8%;
+}
+
+.horizontal-phone {
+    width: 95%;
+}
+
+.phones-absolute {
+    position: relative;
+}
+
+.left-phone-wrapper,
+.right-phone-wrapper {
+    // width: 25.7%;
 }
 
 .slide-1 {

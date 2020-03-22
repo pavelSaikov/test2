@@ -1,24 +1,34 @@
 %buttons-style {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
-    width: 69px;
+    width: 7%;
     color: $common-red;
     cursor: pointer;
 }
 
 .right-btn {
     @extend %buttons-style;
+    justify-content: flex-end;
     img {
-        padding-right: 30px;
+        // padding-right: 30px;
         padding-bottom: 5px;
+    }
+    @media screen and (max-width: $media-tablet)
+    {
+        justify-content: center;
     }
 }
 
 .left-btn {
     @extend %buttons-style;
+    justify-content: flex-start;
     img {
-        padding-left: 30px;
+        // padding-left: 30px;
         padding-bottom: 5px;
+    }
+    @media screen and (max-width: $media-tablet)
+    {
+        justify-content: center;
     }
 }

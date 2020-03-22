@@ -1,7 +1,7 @@
 .logo-container {
     @include flex();
     letter-spacing: -0.5px;
-    @media screen and (max-width: $media-low-tablet) {
+    @media screen and (max-width: $media-tablet) {
         flex-grow: 1;
         @include flex($justify-content: center);
 
