@@ -54,37 +54,72 @@ let items = document.getElementsByClassName('slide');
 let currentItem = 0;
 let isEnabled = true;
 
-function changeCurrentItem(n) {
-    currentItem = (n + items.length) % items.length;
+// function changeCurrentItem(n) {
+//     currentItem = (n + items.length) % items.length;
+// }
+
+function removeClassActive() {
+    for (let item of items) {
+        item.classList.remove('active');
+    }
 }
 
-function hideItem(direction) {
-    isEnabled = false;
-    items[currentItem].classList.add(direction);
-    items[currentItem].addEventListener('animationend', function() {
-        this.classList.remove('active', direction);
-    });
+function swapSlides() {
+    let slide = items[0];
+    slide.remove();
+    document.querySelector('.slides-container').append(slide);
 }
 
-function showItem(direction) {
-    items[currentItem].classList.add('next', direction);
-    items[currentItem].addEventListener('animationend', function() {
+function showItemFromLeft() {
+    const direction = 'from-left';
+    items[0].classList.add('next', direction);
+    items[0].addEventListener('animationend', function() {
         this.classList.remove('next', direction);
         this.classList.add('active');
         isEnabled = true;
     });
 }
 
+function showItemFromRight() {
+    const direction = 'from-right';
+    items[1].classList.add('next', direction);
+    items[1].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+    });
+}
+
+function hideItemToLeft() {
+    const direction = 'to-left';
+    isEnabled = false;
+    items[0].classList.add(direction);
+    items[0].addEventListener('animationend', function() {
+        this.classList.remove('active', direction);
+    });
+}
+
+function hideItemToRight() {
+    const direction = 'to-right';
+    isEnabled = false;
+    items[1].classList.add(direction);
+    items[1].addEventListener('animationend', function() {
+        this.classList.remove('active', direction);
+    });
+}
+
 function previousItem(n) {
-    hideItem('to-right');
-    changeCurrentItem(n - 1);
-    showItem('from-left');
+    if (currentItem == 0) swapSlides();
+    hideItemToRight();
+    showItemFromLeft();
+    currentItem = 0;
 }
 
 function nextItem(n) {
-    hideItem('to-left');
-    changeCurrentItem(n + 1);
-    showItem('from-right');
+    if (currentItem == 1) swapSlides();
+    hideItemToLeft();
+    showItemFromRight();
+    currentItem = 1;
 }
 
 document.querySelector('.left-btn').addEventListener('click', function() {
