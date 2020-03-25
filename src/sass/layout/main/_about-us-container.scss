@@ -1,0 +1,104 @@
+.about-us-container {
+    @include flex($justify-content: center);
+    padding-bottom: 68px;
+    background-color: $elephant-bound-color;
+    @media screen and (max-width: $media-tablet) {
+        padding-bottom: 75px;
+    }
+    @media screen and (max-width: $media-screen450) {
+        padding-bottom: 45px;
+    }
+}
+
+.about-us-sentence {
+    padding-top: 18px;
+    padding-bottom: 46px;
+    font-size: 18px;
+    line-height: 30px;
+    @media screen and (max-width: $media-screen600) {
+        padding-bottom: 0;
+    }
+}
+
+.three-column-layout {
+    @include flex($justify-content: space-between, $flex-wrap: wrap);
+    @media screen and (max-width: $media-screen600) {
+        & > div.cutaway {
+            padding-top: 34px;
+        }
+        :first-child.cutaway {
+            padding-top: 28px;
+        }
+    }
+}
+
+.cutaway {
+    @include flex($flex-direction: column);
+    width: 31.92%;
+    @media screen and (max-width: $media-screen600) {
+        width: 100%;
+    }
+}
+.human-photo {
+    & > img {
+        max-width: 330px;
+        max-height: 330px;
+    }
+}
+
+.human-name {
+    height: 22px;
+    padding-top: 11px;
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    color: $medium-grey-color;
+    overflow: hidden;
+
+    &-margin-left {
+        margin-left: -1px;
+    }
+}
+
+.personal {
+    &-biography {
+        padding-top: 8px;
+        flex-grow: 1;
+        @include font($font-weight: 400, $font-size: 12px);
+        line-height: 22px;
+        color: $grey-with-blue-color;
+        @media screen and (max-width: $media-screen600) {
+            padding-top: 4px;
+        }
+    }
+    &-social-networks {
+        @include flex();
+
+        padding-top: 24px;
+        &-margin-left {
+            margin-left: -1px;
+        }
+
+        & > div {
+            margin-left: 8px;
+        }
+
+        & > div:first-child {
+            margin-left: 1px;
+        }
+        @media screen and (max-width: $media-tablet) {
+            padding-top: 12px;
+        }
+    }
+}
+
+.social-network > img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.about-us-bottom-line {
+    height: 6px;
+    @media screen and (max-width: $media-tablet) {
+        display: none;
+    }
+}

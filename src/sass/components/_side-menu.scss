@@ -1,0 +1,59 @@
+.side-menu {
+    height: 100%;
+    width: 0;
+    &.active {
+        width: 278px;
+    }
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    overflow-x: hidden;
+    background-color: $background-logo-and-menu-container;
+}
+
+.menu-header {
+    @include flex($align-items: center);
+    padding-left: 22.5px;
+    padding-top: 23.5px;
+    @include font($font-size: 19px, $font-weight: bold);
+
+    .logo-container {
+        @include flex($justify-content: start);
+        padding-left: 28.5px;
+    }
+}
+
+.menu-items {
+    padding-left: 71px;
+    padding-top: 184px;
+}
+
+.menu-items__item {
+    padding-top: 27px;
+    &:first-child {
+        padding-top: 0;
+    }
+    a {
+        @include font($font-size: 24px, $font-weight: bold);
+        color: $white-color;
+        &:hover {
+            color: $light-red-color;
+        }
+    }
+}
+
+.dark-background {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    &.active {
+        display: inline;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}

@@ -1,0 +1,58 @@
+.portfolio-container {
+    @include flex($justify-content: center);
+    // height: 864px;
+    background-color: $very-dark-grey;
+}
+
+.portfolio-sentence {
+    padding-top: 22px;
+    line-height: 30px;
+}
+
+.explanatory-sentence {
+    @include font($font-weight:300, $font-size: 18px);
+    color: $grey-with-blue-color;
+}
+
+.portfolio-categories {
+    @include flex($align-items: center);
+    padding-top: 15px;
+
+    &:first-child {
+        margin-left: 0px;
+    }
+
+    & > .tag:first-child {
+        margin-left: 1px;
+        padding: 3px 7px;
+    }
+}
+
+.tag {
+    margin-left: 10px;
+    padding: 3px 6px;
+    @include font($font-weight: 400, $font-size: 12px);
+    color: $grey-with-blue-color;
+    border: 0.7px solid $grey-with-blue-color;
+    border-radius: 4px;
+    cursor: pointer;
+    :hover {
+        color: $milk-with-strawberry-color;
+        border-color: $milk-with-strawberry-color;
+        cursor: pointer;
+    }
+
+    &.active {
+        color: $milk-with-strawberry-color;
+        border-color: $milk-with-strawberry-color;
+    }
+}
+
+.portfolio-bottom-line {
+    width: 100%;
+    height: 6px;
+    background-color: #323746;
+    @media screen and (max-width: $media-screen450) {
+        display: none;
+    }
+}

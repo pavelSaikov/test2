@@ -1,0 +1,34 @@
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 371px;
+    a {
+        @include font($font-size: 12px);
+        color: $white-color;
+        &:hover {
+            color: $light-red-color;
+        }
+    }
+
+    &-paragraph {
+        letter-spacing:  -0.2px;
+    }
+
+    @media screen and (max-width: $media-tablet) {
+        display: none;
+    }
+
+}
+
+.menu-container.selected {
+    color: $light-red-color;
+}
+
+.dot {
+    @include font($font-weight: 700, $font-size: inherit);
+    color:  $white-color;
+
+    @media screen and (max-width:$media-low-tablet) {
+        // display:none;
+    }
+}

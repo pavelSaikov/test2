@@ -1,0 +1,18 @@
+
+
+.logo-and-menu-container {
+    padding: 29px 40px;
+    background-color: $background-logo-and-menu-container;
+    @media screen and (max-width:$media-low-tablet) {
+        padding: 20px 20px;
+    }
+}
+
+
+.logo-and-menu-strip {
+    height: 6px;
+    background-color: $logo-bottom-strip-color;
+    @media screen and (max-width:$media-low-tablet) {
+        display: none;
+    }
+}

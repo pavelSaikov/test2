@@ -1,0 +1,110 @@
+.slide {
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    min-width: 100%;
+}
+.active,
+.next {
+    display: block;
+}
+
+.next {
+    position: relative;
+    width: 100%;
+}
+
+.to-left {
+    animation-name: left;
+}
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+.phones {
+    display: flex;
+    flex-wrap: nowrap;
+
+    align-items: center;
+    width: 100%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    & > * {
+        position: relative;
+    }
+}
+
+.horizontal-phone-wrapper,
+.vertical-phone-wrapper {
+    position: relative;
+
+    .horizontal-phone,
+    .vertical-phone {
+        position: absolute;
+        z-index: 1;
+        &.hide {
+            display: none;
+        }
+        &.black-display.hide {
+            display: none;
+        }
+    }
+
+    .horizontal-phone-shadow,
+    .vertical-phone-shadow {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+.vertical-phone-wrapper {
+    width: 27.5%;
+    margin-left: 5%;
+}
+.vertical-phone {
+    width: 89.5%;
+
+}
+
+.horizontal-phone-wrapper {
+    width: 55%;
+    margin-left: 8%;
+}
+
+.horizontal-phone {
+    width: 95%;
+}
+
+.phones-absolute {
+    position: relative;
+}
+
+

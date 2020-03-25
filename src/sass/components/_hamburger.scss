@@ -1,0 +1,16 @@
+.hamburger {
+    display: none;
+    @media screen and (max-width: $media-tablet) {
+        @include flex($flex-direction: column, $justify-content: space-between);
+        height: 21px;
+        width: 25px;
+    }
+    transition: 0.5s;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 2.4px;
+    background-color: $white-color;
+    border-radius: 2px;
+}
