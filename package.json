@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pavelSaikov/test2.git"
+    "url": "git+//https://github.com/pavelSaikov/singolo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pavelSaikov/test2/issues"
+    "url": "https://github.com/pavelSaikov/singolo/issues"
   },
-  "homepage": "https://github.com/pavelSaikov/test2#readme",
+  "homepage": "https://github.com/pavelSaikov/singolo/#readme",
   "devDependencies": {
     "css-loader": "^3.4.2",
     "file-loader": "^5.1.0",
