@@ -40,10 +40,10 @@
 
 @keyframes right {
     from {
-        left: 100%;
+        left: 0%;
     }
     to {
-        left: 0;
+        left: -100%;
     }
 }
 
@@ -68,6 +68,12 @@
     .vertical-phone {
         position: absolute;
         z-index: 1;
+        &.hide {
+            display: none;
+        }
+        &.black-display.hide {
+            display: none;
+        }
     }
 
     .horizontal-phone-shadow,
@@ -76,40 +82,22 @@
         top: 0;
         left: 0;
     }
-}
 
-.right-phone-wrapper,
-.central-phone-wrapper,
-.left-phone-wrapper {
-    position: relative;
-
-    .shadow-right-phone,
-    .shadow-central-phone,
-    .shadow-left-phone {
-        position: relative;
-    }
-
-    .right-phone,
-    .left-phone {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
-    .central-phone {
-        position: absolute;
-        z-index: 1;
-    }
-
-    .desktop-right-phone,
-    .desktop-central-phone,
-    .desktop-left-phone {
-        position: absolute;
-        // top: 14%;
-        // left: 6%;
-        z-index: 2;
-    }
+    // .vertical-black-display {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 2;
+    //     width: 188.9px;
+    //     height: 334.5px;
+    //     // margin-top: 117px;
+    //     // margin-left: 55.5px;
+    //     border-radius: 2px;
+    //     background-color: black;
+    // }
+    // .vertical-black-display.hide {
+    //     display: none;
+    // }
 }
 
 .vertical-phone-wrapper {
@@ -118,6 +106,7 @@
 }
 .vertical-phone {
     width: 89.5%;
+
 }
 
 .horizontal-phone-wrapper {
@@ -148,19 +137,6 @@
     //     z-index: 2;
     //     margin-top: 53px;
     //     margin-left: 42px;
-    // }
-
-    // .vertical-black-display {
-    //     z-index: 3;
-    //     width: 188.9px;
-    //     height: 334.5px;
-    //     margin-top: 117px;
-    //     margin-left: 55.5px;
-    //     border-radius: 2px;
-    //     background-color: black;
-    // }
-    // .vertical-black-display.hide {
-    //     display: none;
     // }
 
     // .horizontal-phone-shadow {

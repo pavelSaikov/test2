@@ -15,21 +15,34 @@ navig.addEventListener('click', navigationOnClick);
 /////////////////////////////
 function clickOnPhone(event) {
     let parentTarget = event.target.parentElement;
-    if (parentTarget.classList.contains('vertical-phone')) changeImageVerticalPhone();
-    if (parentTarget.classList.contains('horizontal-phone')) changeImageHorizontalPhone();
+    if (parentTarget.classList.contains('vertical-phone')) changeImageVerticalPhone(event);
+    if (parentTarget.classList.contains('horizontal-phone')) changeImageHorizontalPhone(event);
 }
 
 function changeImageVerticalPhone() {
-    let vertBlackBox = document.getElementsByClassName('vertical-black-display')[0];
-
-    if (vertBlackBox.classList.contains('hide')) vertBlackBox.classList.remove('hide');
-    else vertBlackBox.classList.add('hide');
+    let parentTarget = event.target.parentElement;
+    if (parentTarget.classList.contains('black-display')) {
+        let phoneWithImage = document.getElementsByClassName('vertical-phone')[0];
+        phoneWithImage.classList.remove('hide');
+        parentTarget.classList.add('hide');
+    } else {
+        let phoneWithoutImage = document.getElementsByClassName('vertical-phone')[1];
+        phoneWithoutImage.classList.remove('hide');
+        parentTarget.classList.add('hide');
+    }
 }
-function changeImageHorizontalPhone() {
-    let horBlackBox = document.getElementsByClassName('horizontal-black-display')[0];
 
-    if (horBlackBox.classList.contains('hide')) horBlackBox.classList.remove('hide');
-    else horBlackBox.classList.add('hide');
+function changeImageHorizontalPhone() {
+    let parentTarget = event.target.parentElement;
+    if (parentTarget.classList.contains('black-display')) {
+        let phoneWithImage = document.getElementsByClassName('horizontal-phone')[0];
+        phoneWithImage.classList.remove('hide');
+        parentTarget.classList.add('hide');
+    } else {
+        let phoneWithoutImage = document.getElementsByClassName('horizontal-phone')[1];
+        phoneWithoutImage.classList.remove('hide');
+        parentTarget.classList.add('hide');
+    }
 }
 
 let phones = document.getElementsByClassName('phones')[0];
