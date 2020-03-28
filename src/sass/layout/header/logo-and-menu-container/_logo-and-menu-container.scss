@@ -1,11 +1,11 @@
 
 
 .logo-and-menu-container {
-    padding: 29px 40px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
     background-color: $background-logo-and-menu-container;
-    @media screen and (max-width:$media-low-tablet) {
-        padding: 20px 20px;
-    }
+
 }
 
 

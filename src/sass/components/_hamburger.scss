@@ -2,7 +2,7 @@
     display: none;
     @media screen and (max-width: $media-tablet) {
         @include flex($flex-direction: column, $justify-content: space-between);
-        height: 21px;
+        height: 22px;
         width: 25px;
     }
     transition: 0.5s;
