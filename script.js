@@ -54,10 +54,6 @@ let items = document.getElementsByClassName('slide');
 let currentItem = 0;
 let isEnabled = true;
 
-// function changeCurrentItem(n) {
-//     currentItem = (n + items.length) % items.length;
-// }
-
 function removeClassActive() {
     for (let item of items) {
         item.classList.remove('active');
@@ -260,6 +256,10 @@ document.getElementsByClassName('communication-form-container')[0].addEventListe
     button.style.maxWidth = '150px';
     button.addEventListener('click', function(event) {
         modalWindow.classList.remove('active');
+        inputs[0].value = '';
+        inputs[1].value = '';
+        inputs[2].value = '';
+        document.querySelector('textarea').value = '';
     });
     messageContainer.append(button);
 
